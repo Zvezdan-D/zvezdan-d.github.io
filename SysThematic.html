@@ -1,0 +1,147 @@
+<html>
+<head>
+    <title>SysThematic (MediaMonkey skin)</title>
+    <meta name="KeyWords" content="MediaMonkey, add-on, skin, multimedia, music, audio, Windows, software, management, organization, cataloger, SysThematic">
+    <link rel='stylesheet' type='text/css' href='BackgroundColorAnimation.css'>
+    <link rel="stylesheet" type="text/css" href="DownloadButton.css">
+    <link rel='stylesheet' type='text/css' href='Frames.css'>
+
+    <style>
+        #imageBox #imgHover {
+            display: none;
+        }
+        #imageBox #imgStatic {
+            display: block;
+        }
+        #imageBox:hover #imgHover {
+            display: block;
+        }
+        #imageBox:hover #imgStatic {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="tbl" style="position: fixed; top: 0; width: 100%; padding-bottom: 5px" align="Center">
+        <b><font size="+2">SysThematic</font><br />
+        Version 1.0<br />
+        - MediaMonkey skin -</b><br />
+        <i>by Zvezdan Dimitrijevi&cacute;</i>
+    </div>
+    <div id="external">
+        <iframe src="SysThematic_Ext.html" title="Donation" style="width: 100%; height: 100%; border: none;"></iframe>
+    </div>
+
+    <div id="content" style="padding: 10px;">
+        This is a skin for <a href="http://www.mediamonkey.com/">MediaMonkey</a> 5/2024 named SysThematic, since it is based on <a href="https://www.w3.org/TR/css-color-4/#css-system-colors">system colors</a> defined by Windows themes. Consequently, it automatically changes its colors when the theme is changed<sup><a href="#changing-theme" title="Compatibility and limitations">&#91;i&#93;</a></sup>. Windows <a href="https://support.microsoft.com/en-us/windows/change-color-contrast-in-windows-fedc744c-90ac-69df-aed5-c8a90125e696">contrast themes</a> allow you to use any color you like, but only eight are customizable (such as normal text, hyperlinks, button text, etc.). Non-contrast themes do not have this possibility at all.
+        <br /><br />
+        While the other skins are trying to give their own distinct behavior, this one has a different approach—it is created to closely resemble standard Windows applications as much as possible. This includes not only colors but also all other design elements such as borders, hovering effects, and the presence of controls like scrollbars, buttons, and checkboxes. Do you remember the non-skinned version of the old, pre-MM5 program? SysThematic is the closest thing to that with MM5/2024.
+        <br /><br />
+        The interface of the program with this skin looks compact, but still with great readability, especially with the finely tuned contrast themes<sup><a href="#readability" title="Readability">&#91;ii&#93;</a></sup>. It provides a clean appearance and does not have anything fancy or out-of-place that could distract you from obtaining the useful information.
+        <br /><br />
+        This skin is available in two versions. SysThematic Contrast is a simplified, lite version. When used with non-contrast themes, it seems similar to the contrast themes, only with different colors. The choice of contrast themes can be found in Settings &gt; Accessibility &gt; Contrast themes on Windows 11.
+        <br /><br />
+        The enhanced version, SysThematic Chroma, has a fully optimized appeal with non-contrast themes, particularly Windows (light) and Windows (dark); the choice between them is in Settings &gt; Personalization. The enhanced version has a complete set of carefully created icons based on Windows Fluent design that have a light and consistent shape. It also includes a couple of user-customizable options, including window scaling based on the font size, and the track info in the main player with a dynamically adjusted font size that could be displayed in two rows (Title / Artist).
+        <br /><br />
+        SysThematic is a masterpiece, eight months in the making. It is meticulously crafted with great care, paying attention even to the tiniest details. Many things about this skin make it unique, such as the album artwork in the main player, but most of them are not so obvious and will hardly be noticeable to many users. However, all such things put together make it perfect.
+        <br /><br />
+
+        <hr width="100%">
+
+        <table bgcolor="WhiteSmoke">
+            <tr>
+                <td width="100%">
+                    If you want to leave a comment about this add-on, you could visit its related MediaMonkey <a href="http://www.mediamonkey.com/forum/">forum thread</a>.
+                    <br /><br />
+                    You could also take a look at <a href="https://zvezdan-d.github.io/MediaMonkeyAddons.html">my other add-ons</a> for MediaMonkey.
+
+                </td>
+            </tr>
+        </table>
+
+        <hr width="100%">
+
+        <center>
+            Click the image to see a <a href="SysThematic_Gallery.html">gallery</a>:
+            <br />
+            <a href="SysThematic_Gallery.html" id="imageBox" style="display:inline-block;">
+                <img id="imgStatic" src="SysThematic_Non-contrast_Dark_Player.png">
+                <img id="imgHover" src="SysThematic.gif">
+            </a>
+        </center>
+
+        <p><font size="+1"><b><a id="installation">Installation</a></b></font></p>
+        Drag&drop SysThematicContrast-xx.mmip file to the MM player or use <i>Tools &gt; Addons</i> dialog box, chose <i>Install addon from file</i>, and find the .mmip file.
+        <br /><br />
+        You need to accept the license agreement if you want to use this add-on.
+        <br /><br />
+
+        <p><font size="+1"><b><a id="usage">Usage</a></b></font></p>
+        There is not too much to say about the usage of the SysThematic Contrast version of the skin. It automatically adjusts the colors of the program when switching Windows themes, without any user intervention<sup><a href="#changing-theme" title="Compatibility and limitations">&#91;i&#93;</a></sup>.
+        <br /><br />
+        The enhanced Chroma version of the skin has several additional options, many of which could be found in the Options dialog box when you choose that skin, unless noted otherwise.
+        <dl>
+            <ul>
+                <li>
+                    <i>Base font size that determines window scaling</i>: 11px-48px (for users with 8k or 16k screens), default 12px;
+                </li>
+                <li>
+                    <i>Font size of Track summary when resizing window</i>: the size of track information in the main player could be variable (default), meaning it could be automatically adjusted based on the horizontal size of the player, or it could be fixed;
+                </li>
+                <li>
+                    <i>Album Artwork in main player</i>: the album artwork could be hidden, shown only if artwork exists (>= MM5.1), or shown always, even for unknown artwork (default);
+                </li>
+                <li>
+                    <i>Selected playing/inaccessible files with contrast themes</i>: the playing and inaccessible files that are selected in the filelist could be unreadable with some Windows contrast themes, depending on their colors; during the development of this skin, many different approaches were tried to overcome this problem, and you have the ability to experiment with them to see what would be optimal with your chosen theme; the last option is probably the best (color-mix), but it works only with MM2024 and higher;
+                </li>
+                <li>
+                    <i>Display mode for popups in Browser and Grid (by Album) views</i>: the popups showing tracks for albums selected in the grid could be displayed using the colors generated by the program (for albums with the known artwork, they would be based on the most prominent color from it) (default), or they could be displayed using system colors only;
+                </li>
+                <li>
+                    <i>Background color of autoplaylist/advanced search editors</i>: the autoplaylist and advanced search editors could have the hyperlink color with the opposite lightness for their background color (default), or they could use the same system background color as the filelists.
+                </li>
+                <li>
+                    <i>Show Track summary, Show Title/Artist (2 rows)</i>: these options can only be found in the context menu when you right-click on the Track summary in the main player; with them, you can determine if you want the standard display of the Track summary in a single row, or if you want to have the Title and Artist in two rows.
+                </li>
+            </ul>
+            <br />
+        </dl>
+
+        <p><font size="+1"><b><a id="compatibility">Compatibility and limitations</a></b></font></p>
+        This skin works with MediaMonkey 5.0.2.2516 or higher.
+        <br /><br />
+        The Dark non-contrast theme with MM 5.0.2 has messed colors with the enhanced Chroma version of skin, and it has the same look as the Light theme with the Contrast version of skin. However, that version of the program is really old and definitely should be upgraded.
+        <br /><br />
+        The Chromium engine used in MediaMonkey generally has a poorly implemented system colors with the Dark non-contrast theme, although the Light one is not much better. What's even worse is that some of them are changed between different Chromium versions, especially the Highlight color.
+        <br /><br />
+        If you primarily use Windows with non-contrast themes, you should consider obtaining the SysThematic Chroma version of the skin, which has optimized colors for such themes, along with other design elements that are distinct in contrast themes (e.g., scrollbars, buttons, checkboxes and so on).
+        <br /><br />
+        However, the Chroma version of skin is adjusted only for the default accent colors for Windows (dark) and Windows (light) non-contrast themes, since Chromium currently doesn't support the AccentColor system color (at least not <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/system-color#browser_compatibility">officially</a>).
+        <br /><br />
+        The skin uses the hyperlink (LinkText) color for the borders of active windows, while the inactive text (GrayText) color is used for the borders of inactive windows, since many themes use similar colors for them. However, that is not always the case, especially with the Aquatic theme, causing different borders than other Windows programs. Unfortunately, the ActiveBorder and InactiveBorder system colors are <a href="https://www.w3.org/TR/css-color-4/#deprecated-system-colors">deprecated</a> and not supported by Chromium.
+        <br /><br />
+        The workaround for the accent and active/inactive border colors is planed for a future version of the skin.
+        <br />
+
+        <hr width="100%">
+
+        <ul style="list-style-type: lower-roman; padding-left: 1em;">
+            <li id="changing-theme">
+                The skin currently doesn't respond to changes in Windows contrast themes that are made after the program is opened, beginning with MM 2024 build 3018. It is fine if you start the program with the contrast theme already activated. However, if you change the contrast theme while the program is running, the skin will have the same appearance as with the non-contrast theme until its restart. I hope MM developers will resolve this problem in the future.
+                <br /><br />
+                <font size="-1">If you frequently change the contrast theme and do not want to restart the program each time you do so, you have two possibilities. The second one is only for those users who are familiar with the program folders and know what they are doing:
+                <ol>
+                    <li>downgrade to MM 2024 <a href="http://www.mediamonkey.com/forum/viewtopic.php?p=517876#p517876">build 3005</a>; or,</li>
+                    <li>install build 3005 in portable mode, but don't start it; install any newer version, either in portable mode or normally; move its chromium\XX sub-folder to another temporary folder (just in case you change your mind); copy the chromium\120 sub-folder from build 3005 to the chromium folder of the new version and rename it to XX (where "XX" is the number of the chromium sub-folder of the new version that you just copied to the temporary folder, e.g. it would be 123 for build 3018). I tested this solution and it worked fine, but there is no guarantee for it.</li>
+                </ol>
+                <br />
+                </font>
+            </li>
+            <li id="readability">
+                If you are using a custom contrast theme, it is recommended that you check your colors for compliance with WCAG 2.0 minimum contrast for the best readability. This can be done using programs such as <a href="https://www.tpgi.com/color-contrast-checker/">Colour Contrast Analyser</a> or online tools like <a href="https://contrast-grid.eightshapes.com">Contrast Grid</a>, <a href="https://contrastgrid.com">Color Contrast Grid</a>, or <a href="https://jxnblk.github.io/colorable/demos/matrix/">Colorable</a>. You could even try a new APCA method for calculating and predicting readability contrast with <a href="https://apcacontrast.com/">APCA Contrast Calculator</a>.
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
