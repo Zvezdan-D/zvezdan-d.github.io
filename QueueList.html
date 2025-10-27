@@ -10,7 +10,7 @@
 <body>
 <div class="tbl" style="position: fixed; top: 0; width: 100%; padding-bottom: 5px" align="Center">
 <b><font size="+2">Queue List</font><br />
-Version 1.2.1<br />
+Version 2.0.1<br />
 - MediaMonkey Add-on -</b><br />
 <i>by Zvezdan Dimitrijevi&cacute;</i>
 </div>
@@ -21,7 +21,7 @@ Version 1.2.1<br />
 
 <div id="content" style="padding: 10px;">
 
-This version of the add-on works with <a href="http://www.mediamonkey.com/">MediaMonkey</a> v2.x-4.x (MM 3.1.0.1223 or higher is recommended, and there is also <a href="https://zvezdan-d.github.io/QueueListMM5.html">version</a> of the add-on that works with MM v5). It is similar to the Queue option of Winamp, i.e. it allows you to create a list with files that will be played immediately after the currently playing file, no matter if Shuffle is turned on or off.<br /><br />
+This version of the add-on works with <a href="http://www.mediamonkey.com/">MediaMonkey</a> v2.x-4.x (MM 3.1.0.1223 or higher is recommended, v4.1.0.1648 or higher is even better, and there is also <a href="https://zvezdan-d.github.io/QueueListMM5.html">version</a> of the add-on that works with MM v5/20xx). It is similar to the Queue option of Winamp, i.e. it allows you to create a list with files that will be played immediately after the currently playing file, no matter if Shuffle is turned on or off.<br /><br />
 
 The list of queued files is a simple playlist under the Playlists branch, which enables easy manipulation of its files (move up/down, remove) as with any other playlist. When a file from this queue list starts playback, it is automatically removed from that list. After all files from the queue list finish playback, the program continues with the reproduction of the remaining files from the Now Playing panel.<br /><br />
 
@@ -34,13 +34,20 @@ If you want to discus about this add-on, you could visit its related MediaMonkey
 You could also take a look on <a href="https://zvezdan-d.github.io/MediaMonkeyAddons.html">my other add-ons</a> for MediaMonkey.
 
 </td><td valign="middle" align="center" width="250px">
-<div class="download-box" style="float:left;"><a id="download" title="Download" class="download-link" href="http://solair.eunet.rs/~zvezdand/QueueList-1.2.1.mmip"><span><strong><font size="+1">Download</font></strong> <em>The latest freely available<br />version of the add-on</em></span></a></div>
+<div class="download-box" style="float:left;"><a id="download" title="Download" class="download-link" href="https://zvezdan-d.github.io/QueueList-2.0.1.mmip"><span><strong><font size="+1">Download</font></strong> <em>The latest freely available<br />version of the add-on</em></span></a></div>
 </td></tr></table>
 
 <hr width="100%">
 
 <p><font size="+1"><b><a id="whatisnew">What is new</a></b></font></p>
 <dl>
+<dt>v2.0 - 2022-04-20</dt><ul>
+<li>Added: option DuplicatesMode to the <a href="#inikeys">INI file</a> that determines what happens when you apply the <i>Queue Selected</i> command with files that already exist in the Queue List playlist;
+<li>Added: option RemoveFromNPAfterPlay to the INI file that determines what happens with files added to the Now Playing panel after applying the <i>Queue Selected</i> command with files that don't exist in the Now Playing panel when they finish playing;
+<li>Fixed: playback of the remaining files after the queue was played in normal mode (when the shuffle is turned off);
+<li>Fixed: automatic adding to the Now Playing list of manually added files to the Queue List by drag&drop or copy/paste, but only with MM v4.1.0.1648 or higher.
+</ul><br />
+
 <dt>v1.2.1 - 2015-06-22</dt><ul>
 <li>Fixed: some things.
 </ul><br />
@@ -87,14 +94,14 @@ If you press "F4" hot-key, you will get displayed the Queue List playlist; if yo
 
 If you have one or more files in the Queue List that are not already played and if you restart the program, that playlist will keep its content and the playback will resume with them until the Queue List finishes empty.<br /><br />
 
-When you apply the <i>Queue Selected</i> command on a file that already exists in the Queue List, it will be added again making duplicates in the list. Some versions of the program display the confirmation dialog box when that happens.<br /><br />
+When you apply the <i>Queue Selected</i> command on a file that already exists in the Queue List, what happens next depends on the DuplicatesMode <a href="#inikeys">INI key</a>: such file could be skipped, it could be added again making duplicates in the list, or it could be removed similarly as with Winamp (default).<br /><br />
 
 After the program finishes with the reproduction of the currently playing file, it will automatically start playback of files from the Queue List. When the file from this list starts playback, it is automatically removed from it. When all files from the Queue List are played, that playlist will end up empty, and the program will continue with the reproduction of the remaining files from the Now Playing panel.<br /><br />
 
-This add-on allows playing files from the Now Playing files just once, including files added from the queue. In another words, not a single file should be skipped or played twice. Using shuffle mode for example, if you have 5 files in the Now Playing panel and if you played 2 files before you added other files to the Queue List, after these files from that queue finish with playback, the program will play the remaining 3 files.<br /><br />
+This add-on allows playing files from the Now Playing files just once, including files added from the queue. In another words, not a single file should be skipped or played twice. Using the shuffle mode, for example, if you have 5 files in the Now Playing panel and if you played 2 files before you added other files to the Queue List, after these files from that queue finish with playback, the program will play the remaining 3 files.<br /><br />
 
 <p><font size="+1"><b><a id="limitations">Limitations</a></b></font></p>
-Manually adding files to the Queue List by drag &drop or copy/paste doesn't automatically add files to the Now Playing panel that are missing, so in such case you should use the <i>Queue Selected</i> command instead.<br /><br />
+Manually adding files to the Queue List by drag &drop or copy/paste doesn't automatically add files to the Now Playing panel that are missing with MM older than v4.1.0.1648, so with these versions you should use the <i>Queue Selected</i> command instead.<br /><br />
 
 <p><font size="+1"><b><a id="inikeys">Additional INI keys</a></b></font></p>
 There are some keys in the [QueueList] section of the MediaMonkey.ini file for some less needed options:<br />
@@ -104,29 +111,13 @@ There are some keys in the [QueueList] section of the MediaMonkey.ini file for s
 
 <li>ShowQueueListHotkey - the toggle hot-key for display of the Queue List playlist; default is F4.<br /><br />
 
+<li>DuplicatesMode - determines what happens when you apply the <i>Queue Selected</i> command or drag&drop or copy/paste with files that already exist in the Queue List playlist: 0 - do nothing, 1 - add duplicates (old behavior), 2 - remove existing (new default);<br /><br />
+
+<li>RemoveFromNPAfterPlay - determines what happens with files added to the Now Playing panel after applying the <i>Queue Selected</i> command or drag&drop or copy/paste with files that don't exist in the Now Playing panel when they finish playing: 0 - leave them in NP (old behavior), 1 - remove them (new default).<br /><br />
+
 The MediaMonkey.ini file is stored in the c:\Documents and Settings\User_Name\Application Data\MediaMonkey folder for MM4 and Win7. You could find the location of the .ini file depending of the version of MediaMonkey and Windows <a href="https://www.mediamonkey.com/support/knowledge-base/mediamonkey-install-config/modifying-the-mediamonkey-db-and-ini-files/">here</a>. If you want to modify any key in it using e.g. Notepad, you should do that with closed MediaMonkey application.<br />
 
-<!-- Start of StatCounter Code for Default Guide -->
-<script type="text/javascript">
-var sc_download_type="7z|aac|avi|csv|doc|exe|flv|gif|gz|jpg|jpeg|js|mmip|mp3|mp4|mpg|mpeg|mov|pdf|phps|png|ppt|rar|sit|tar|torrent|txt|wma|wmv|xls|xml|zip";
-var sc_project=9499114;
-var sc_invisible=1;
-var sc_security="629c143c";
-var scJsHost = (("https:" == document.location.protocol) ?
-"https://secure." : "http://www.");
-document.write("<sc"+"ript type='text/javascript' src='" +
-scJsHost+
-"statcounter.com/counter/counter.js'></"+"script>");
-</script>
-<noscript><div class="statcounter"><a title="web counter"
-href="http://statcounter.com/free-hit-counter/"
-target="_blank"><img class="statcounter"
-src="http://c.statcounter.com/9499114/0/629c143c/1/"
-alt="web counter"></a></div></noscript>
-<!-- End of StatCounter Code for Default Guide -->
-
 <center><img src="http://s04.flagcounter.com/count/uSgs/bg=FFFFFF/txt=000000/border=CCCCCC/columns=1/maxflags=5/viewers=3/labels=1/pageviews=1/" border="0"></center>
-
 </div>
 </body>
 </html>

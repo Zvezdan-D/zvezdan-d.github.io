@@ -8,164 +8,148 @@
 </head>
 
 <body>
-<div class="tbl" style="position: fixed; top: 0; width: 100%; padding-bottom: 5px" align="Center">
-<b><font size="+2">Update Location of Files in Database</font><br />
-Version 1.4.5<br />
-- MediaMonkey Add-on -</b><br />
-<i>by Zvezdan Dimitrijevi&cacute;</i>
-</div>
+    <div class="tbl" style="position: fixed; top: 0; width: 100%; padding-bottom: 5px" align="Center">
+        <b><font size="+2">Update Location of Files in Database</font><br />
+        Version 1.4.5<br />
+        - MediaMonkey add-on -</b><br />
+        <i>by Zvezdan Dimitrijevi&cacute;</i>
+    </div>
+    <div id="external">
+        <iframe src="UpdateLocationOfFiles_Ext.html" title="Donation" style="width: 100%; height: 100%; border: none;"></iframe>
+    </div>
 
-<div id="external">
-    <iframe src="UpdateLocationOfFiles_Ext.html" title="Donation" style="width: 100%; height: 100%; border: none;"></iframe>
-</div>
+    <div id="content" style="padding: 10px;">
+        This add-on works with <a href="http://www.mediamonkey.com/">MediaMonkey</a> versions 2.x-4.x (there is also a <a href="https://zvezdan-d.github.io/UpdateLocationOfFilesMM5.html">version</a> of the add-on that works with MM v5/20xx).
+        <br /><br />
+        The purpose of this add-on is to update the serial number of a drive and/or the paths of files stored in the database. For example, after upgrading a hard disk or moving files from/to a network drive with UNC paths. It allows specifying the old and new base folders (not necessarily the root of a drive), and it could copy the media files from the old to the new location, in addition to updating the location data in the database.
+        <br /><br />
+        The <a href="https://zvezdan-d.github.io/UpdateLocationOfFilesNew.html">enhanced version</a> of the add-on has even more functionality, but it is available only to donors.
+        <br /><br />
 
-<div id="content" style="padding: 10px;">
+        <table bgcolor="WhiteSmoke">
+            <tr>
+                <td width="100%">
+                    If you want to leave a comment about this add-on, you could visit its related MediaMonkey <a href="http://www.mediamonkey.com/forum/viewtopic.php?f=2&t=63823">forum thread</a>.
+                    <br /><br />
+                    You could also take a look at <a href="https://zvezdan-d.github.io/MediaMonkeyAddons.html">my other add-ons</a> for MediaMonkey.
+                </td>
+                <td valign="middle" align="center" width="250px">
+                    <div class="download-box" style="float:left;"><a id="download" title="Download" class="download-link" href="https://zvezdan-d.github.io/UpdateLocationOfFiles-1.4.5.mmip"><span><strong><font size="+1">Download</font></strong> <em>The latest freely available<br />version of the add-on</em></span></a>
+                    </div>
+                </td>
+            </tr>
+        </table>
 
-This add-on works with <a href="http://www.mediamonkey.com/">MediaMonkey</a> v2.x-4.x (there is also <a href="https://zvezdan-d.github.io/UpdateLocationOfFilesMM5.html">version</a> of the add-on that works with MM v5). Its purpose is to update serial number of a drive and/or paths of files stored in the database, for example after upgrading hard disk or moving files from/to some network drive with UNC path. This add-on could change the mentioned data stored in the database only, but it could also copy the media files from the old to the new location.<br /><br />
+        <hr width="100%">
 
-Its main advantages to some another similar scripts are the possibility to update location of files on network drives and the option to specify old and new base paths, e.g. if you want to update c:\Documents & Settings\User\Music\ to d:\Music\.
-<br /><br />
+        <center><img src="https://c2.staticflickr.com/6/5457/30490411253_62a26002bd_o.png" alt="UpdateLocationOfFiles-1.3" border="0"></center>
 
-<table bgcolor="WhiteSmoke"><tr><td width="100%">
-If you want to discus about this add-on, you could visit its related MediaMonkey <a href="http://www.mediamonkey.com/forum/viewtopic.php?f=2&t=63823">forum thread</a>.
-<br /><br />
+        <p><font size="+1"><b><a id="whatisnew">What is new</a></b></font></p>
+        <dl>
+        <dt>v1.4.5 - 2019-05-11</dt><ul>
+        <li>Fixed: update when the Old path contains the @ character [MM3+], i.e. the _ % [ characters [MM2].
+        </ul><br />
 
-You could also take a look on <a href="https://zvezdan-d.github.io/MediaMonkeyAddons.html">my other add-ons</a> for MediaMonkey.
+        <dt>v1.4 - 2015-06-22</dt><ul>
+        <li>Fixed: many things.
+        </ul><br />
 
-</td><td valign="middle" align="center" width="250px">
-<div class="download-box" style="float:left;"><a id="download" title="Download" class="download-link" href="http://solair.eunet.rs/~zvezdand/UpdateLocationOfFiles-1.4.5.mmip"><span><strong><font size="+1">Download</font></strong> <em>The latest freely available<br />version of the add-on</em></span></a></div>
-</td></tr></table>
+        <dt>v1.3.3 - 2012-06-12</dt><ul>
+        <li>Fixed: display of old UNC paths on some broken/faulty databases.
+        </ul><br />
 
-<hr width="100%">
+        <dt>v1.3.2 - 2012-06-01</dt><ul>
+        <li>Fixed: update when the old and new paths are same with the same drive letters, but with different drive serial numbers.
+        </ul><br />
 
-<center><img src="https://c2.staticflickr.com/6/5457/30490411253_62a26002bd_o.png" alt="UpdateLocationOfFiles-1.3" border="0"></center>
+        <dt>v1.3.1 - 2012-02-26</dt><ul>
+        <li>Fixed: result of searching for existing paths from SynchLocation table.
+        </ul><br />
 
-<p><font size="+1"><b><a id="whatisnew">What is new</a></b></font></p>
-<dl>
-<dt>v1.4.5 - 2019-05-11</dt><ul>
-<li>Fixed: update when the Old path contains the @ character [MM3+], i.e. the _ % [ characters [MM2].
-</ul><br />
+        <dt>v1.3 - 2012-02-24</dt><ul>
+        <li>Added: <i>Copy files from the old to the new location first</i> option;
+        <li>Added: update of drive-id/paths in SynchLocation table;
+        <li>Fixed: update of drive-id/paths in Playlists table;
+        <li>Fixed: update of locations when <i>only for existing files</i> option is turned on, the old path is the root of a drive and the old and new drives are the ones with the drive letter (i.e. they are not UNC/URL).
+        </ul><br />
 
-<dt>v1.4 - 2015-06-22</dt><ul>
-<li>Fixed: many things.
-</ul><br />
+        <dt>v1.2 - 2012-02-13</dt><ul>
+        <li>Added: support for mapped network drives;
+        <li>Added: support for URL/UPnP old paths in Songs table (cannot be specified as new paths);
+        <li>Added: selection of the new drive/folder in the tree panel after the update;
+        <li>Fixed: display of the updated paths in the tracklist;
+        <li>Fixed: Update and Cancel buttons could be clicked when searching for existing files if the <i>Update paths only for existing files</i> option is turned off.
+        </ul><br />
 
-<dt>v1.3.3 - 2012-06-12</dt><ul>
-<li>Fixed: display of old UNC paths on some broken/faulty databases.
-</ul><br />
+        <dt>v1.1.1 - 2012-02-04</dt><ul>
+        <li>Fixed: error with MM3 older than 3.1.0.1235.
+        </ul><br />
 
-<dt>v1.3.2 - 2012-06-01</dt><ul>
-<li>Fixed: update when the old and new paths are same with the same drive letters, but with different drive serial numbers.
-</ul><br />
+        <dt>v1.1 - 2012-01-31</dt><ul>
+        <li>Added: <i>Update paths only for existing files</i> option;
+        <li>Added: support for MM2;
+        <li>Fixed: displayed number of existing tracks.
+        </ul><br />
 
-<dt>v1.3.1 - 2012-02-26</dt><ul>
-<li>Fixed: result of searching for existing paths from SynchLocation table.
-</ul><br />
+        <dt>v1.0.1 - 2012-01-25</dt><ul>
+        <li>Fixed: wrong old paths with missing "\" after drive letter [MM3];
+        <li>Fixed: displayed number of existing tracks.
+        </ul><br />
 
-<dt>v1.3 - 2012-02-24</dt><ul>
-<li>Added: <i>Copy files from the old to the new location first</i> option;
-<li>Added: update of drive-id/paths in SynchLocation table;
-<li>Fixed: update of drive-id/paths in Playlists table;
-<li>Fixed: update of locations when <i>only for existing files</i> option is turned on, the old path is the root of a drive and the old and new drives are the ones with the drive letter (i.e. they are not UNC/URL).
-</ul><br />
+        <dt>v1.0 - 2012-01-09</dt><ul>
+        <li>First public version.
+        </ul><br />
+        </dl>
 
-<dt>v1.2 - 2012-02-13</dt><ul>
-<li>Added: support for mapped network drives;
-<li>Added: support for URL/UPnP old paths in Songs table (cannot be specified as new paths);
-<li>Added: selection of the new drive/folder in the tree panel after the update;
-<li>Fixed: display of the updated paths in the tracklist;
-<li>Fixed: Update and Cancel buttons could be clicked when searching for existing files if the <i>Update paths only for existing files</i> option is turned off.
-</ul><br />
+        <p><font size="+1"><b><a id="installation">Installation</a></b></font></p>
+        <ul><li>For MediaMonkey 3.0 or higher - just double-click on the UpdateLocationOfFiles-xx.mmip file; if you are on Vista or newer Windows and you got "Product installation error", make sure you have MM set to <a href="http://www.mediamonkey.com/support/index.php?/Knowledgebase/Article/View/58/0/extensions-cannot-be-installed">"Run as Administrator"</a>; if you downloaded the installation package with IE7 and it changed its extension to a .zip, you should first change it back to a .mmip.</li>
+        <li>For MediaMonkey 2.x - rename a .mmip extension to a .zip, extract the UpdateLocationOfFiles.vbs file to the MediaMonkey's "Scripts" folder and restart MM program.</li></ul>
 
-<dt>v1.1.1 - 2012-02-04</dt><ul>
-<li>Fixed: error with MM3 older than 3.1.0.1235.
-</ul><br />
+        <p><font size="+1"><b><a id="usage">Usage</a></b></font></p>
+        After installation of the add-on you will find the new <i>Update Location of Files in Database</i> option in the <i>Tools / Scripts<i> menu. When you choose that option from the menu, you will get opened the add-on's dialog box. After its first start, the options will be set to their default blank/unchecked states; if you change some option in the dialog box and start the update, the settings will be remembered in the MediaMonkey.ini file, so the next opening of the dialog box will show those last settings. The exception is with the <i>Old drive</i> and <i>Old path</i> combo boxes that will be automatically selected with the drive/path of the selected folder in the Tree panel. However, the old drive/path could be set manually in the mentioned dialog box as well.<br /><br />
 
-<dt>v1.1 - 2012-01-31</dt><ul>
-<li>Added: <i>Update paths only for existing files</i> option;
-<li>Added: support for MM2;
-<li>Fixed: displayed number of existing tracks.
-</ul><br />
+        With the <i>Old drive</i> and <i>Old path</i> combo boxes you should set the old location of files (source) and with the <i>New path</i> text box you should set the new location of files (destination). To be able to do update, both locations should be correctly specified. If your <i>Old drive/path</i> dropdown lists are not filled with drives/paths, that means that your database is empty, in which case this add-on cannot be used - you should have database that contains files if you want to update their location (as the name of the add-on suggests).<br /><br />
 
-<dt>v1.0.1 - 2012-01-25</dt><ul>
-<li>Fixed: wrong old paths with missing "\" after drive letter [MM3];
-<li>Fixed: displayed number of existing tracks.
-</ul><br />
+        The <i>Old drive</i> combo box shows all drives containing media files that are added to the database (Library). These are the same drives that you have displayed in the Location sub-folder of the Entire Library collection. When you choose drive from that combo box, the <i>Old path</i> combo box will be filled with all folders from that drive containing files in the database including all their parent folders until the root of drive. For example, if I have one track in the database which has the path C:\Music\Pink Floyd\Time.mp3, there would be listed 3 items: C:\, C:\Music\ and C:\Music\Pink Floyd\.<br /><br />
 
-<dt>v1.0 - 2012-01-09</dt><ul>
-<li>First public version.
-</ul><br />
-</dl>
+        With the <i>Old path</i> combo box you are choosing the base folder that you want to update. This means that you will get updated all files from that folder and its sub(-sub)-folders recursively. This also means that you should select the root of the drive in the <i>Old path</i> combo box if you want to update all files from that drive. For example, if I specify C:\Music\, all files which have that on the beginning of the path will be updated, like C:\Music\Pink Floyd\Time.mp3, but not file like C:\My Documents\Pink Floyd\Time.mp3 since it has different base folder.<br /><br />
 
-<p><font size="+1"><b><a id="installation">Installation</a></b></font></p>
-<ul><li>For MediaMonkey 3.0 or higher - just double-click on the UpdateLocationOfFiles-xx.mmip file; if you are on Vista or newer Windows and you got "Product installation error", make sure you have MM3 set to <a href="http://www.mediamonkey.com/support/index.php?/Knowledgebase/Article/View/58/0/extensions-cannot-be-installed">"Run as Administrator"</a>; if you downloaded the installation package with IE7 and it changed its extension to a .zip, you should first change it back to a .mmip.</li>
-<li>For MediaMonkey 2.x - rename a .mmip extension to a .zip, extract the UpdateLocationOfFiles.vbs file to the MediaMonkey's "Scripts" folder and restart MM program.</li></ul>
+        The <i>Old location</i> label shows how many media and playlist files from the database are located in the base folder (and its sub-folders) selected by <i>Old path</i>; also, it shows how many of those files still physically exist at that location.<br /><br />
 
-<p><font size="+1"><b><a id="usage">Usage</a></b></font></p>
-After installation of the add-on you will find the new "Update Location of Files in Database..." option in the Tools | Scripts menu. When you choose that option from the menu, you will get opened the add-on's dialog box. After its first start, the options will be set to their default blank/unchecked states; if you change some option in the dialog box and start the update, the settings will be remembered in the MediaMonkey.ini file, so the next opening of the dialog box will show those last settings. The exception is with the <i>Old drive</i> and <i>Old path</i> combo boxes that will be automatically selected with the drive/path of the selected folder in the Tree panel. However, the old drive/path could be set manually in the mentioned dialog box as well.<br /><br />
+        For example, if my <i>Old location</i> shows "228831 media files + 1329 playlist files, 229920 existing + 240 missing", that means that I have 228831 records about media files and 1329 records containing the information about playlist files stored into the database. The sum of these two numbers is 230160 files and it is equal to the sum of another two numbers (229920 existing + 240 missing). In another words, of all my media and playlist files referenced in the database I have 240 files that are psychically missing on the location that I have specified with the <i>Old path</i>. It is not displayed how many media or playlist files are existing/missing individually, but only for their sum.<br /><br />
 
-With the <i>Old drive</i> and <i>Old path</i> combo boxes you should set the old location of files (source) and with the <i>New path</i> text box you should set the new location of files (destination). To be able to do update, both locations should be correctly specified. If your <i>Old/drive path</i> dropdown lists are not filled with drives/paths, that means that your database is empty, in which case this add-on cannot be used - you should have database that contains files if you want to update their location (as the name of the add-on suggests).<br /><br />
+        By the way, the records containing information about playlist files are not the same as the records about playlists. The records of playlists could contain the information about the imported playlists files, but if you have playlists that are created by yourself, i.e. they are not created by import from playlist files, then such playlists will not contain the information about playlist files.<br /><br />
 
-The <i>Old drive</i> combo box shows all drives containing media files that are added to the database (Library). These are the same drives that you have displayed in the Location sub-folder of the Entire Library collection. When you choose drive from that combo box, the <i>Old path</i> combo box will be filled with all folders from that drive containing files in the database including all their parent folders until the root of drive. For example, if I have one track in the database which has the path C:\Music\Pink Floyd\Time.mp3, there would be listed 3 items: C:\, C:\Music\ and C:\Music\Pink Floyd\.<br /><br />
+        In the <i>New path</i> text box you should specify the base folder which would replace the old one after applied the <i>Update</i> option. For example, if the <i>Old path</i> is "c:\Music\" and <i>New path</i> is "d:\Media\My Music\" then all files in the database that have "c:\Music\" on the begin of path will be updated to "d:\Media\My Music\". You could type the new path on keyboard or you could click on the "..." button to choose an existing drive/folder from the <i>Browse for folder</i> dialog box.<br /><br />
 
-With the <i>Old path</i> combo box you are choosing the base folder that you want to update. This means that you will get updated all files from that folder and its sub(-sub)-folders recursively. This also means that you should select the root of the drive in the <i>Old path</i> combo box if you want to update all files from that drive. For example, if I specify C:\Music\, all files which have that on the beginning of the path will be updated, like C:\Music\Pink Floyd\Time.mp3, but not file like C:\My Documents\Pink Floyd\Time.mp3 since it has different base folder.<br /><br />
+        Similarly to the <i>Old location</i>, the <i>New location</i> label shows how many media and playlist files from the database physically exist at the base folder (and its sub-folders) specified by <i>New path</i>.<br /><br />
 
-The <i>Old location</i> label shows how many media and playlist files from the database are located in the base folder (and its sub-folders) selected by <i>Old path</i>; also, it shows how many of those files still physically exist at that location.<br /><br />
+        When you change the old or new path, the add-on will start checking for existence of the files at specified locations which could be time consuming, especially with the large databases and/or media files located on network drives. You don't need to wait for the add-on to finish searching for files since it is executed in another thread just for checking purpose and will be canceled if you click on the <i>Update</i> button. However, it is recommended to wait for add-on to finish with that searching because it will display how many files from the database are found on the new specified location.<br /><br />
 
-For example, if my <i>Old location</i> shows "228831 media files + 1329 playlist files, 229920 existing + 240 missing", that means that I have 228831 records about media files and 1329 records containing the information about playlist files stored into the database. The sum of these two numbers is 230160 files and it is equal to the sum of another two numbers (229920 existing + 240 missing). In another words, of all my media and playlist files referenced in the database I have 240 files that are psychically missing on the location that I have specified with the <i>Old path</i>. It is not displayed how many media or playlist files are existing/missing individually, but only for their sum.<br /><br />
+        If the option <i>Copy files from the old to the new location first</i> is turned on, then the files will be physically copied before updating of the database; otherwise, only the data about the location of files in the database will be modified. If you plan to use this option, it is recommended that you temporarily turn off the File Monitor option in the Options dialog box (if you have it already enabled) before you open the add-on's dialog box.<br /><br />
 
-By the way, the records containing information about playlist files are not the same as the records about playlists. The records of playlists could contain the information about the imported playlists files, but if you have playlists that are created by yourself, i.e. they are not created by import from playlist files, then such playlists will not contain the information about playlist files.<br /><br />
+        Only the media/playlist files previously stored in the database could be copied. If you have some extra files beside of the media files in their containing folders, e.g. bitmaps with covers or some txt/html files, they would not be copied using the mentioned option; in that case you should use your preferred program for backup to copy files from the old to the new location before you apply this add-on.<br /><br />
 
-In the <i>New path</i> text box you should specify the base folder which would replace the old one after applied the <i>Update</i> option. For example, if the <i>Old path</i> is "c:\Music\" and <i>New path</i> is "d:\Media\My Music\" then all files in the database that have "c:\Music\" on the begin of path will be updated to "d:\Media\My Music\". You could type the new path on keyboard or you could click on the "..." button to choose an existing drive/folder from the <i>Browse for folder</i> dialog box.<br /><br />
+        If you want to update location in database only for files that exist at the new specified location, you should turn on the option <i>Update paths in database only for files that exist at new location</i>. In that case you should wait for the add-on to finish with search for files before you click on the <i>Update</i> button. However, if you turn that option off, you could click on the <i>Update</i> button immediately after you specify the old and new paths.<br /><br />
 
-Similarly to the <i>Old location</i>, the <i>New location</i> label shows how many media and playlist files from the database physically exist at the base folder (and its sub-folders) specified by <i>New path</i>.<br /><br />
+        The <i>Backup</i> button allows you to save a copy of the current (active) database to some safe place. And finally, when all previously mentioned options are set as wanted, the click on the <i>Update</i> button will start the update action (which could take some time). After the update is finished, the add-on could try to refresh the affected paths in the main filelist, but sometimes that could be unsuccessful because of some limitations in the program itself, in which case the simple restart of the program would help. The paths in the Now Playing panel will be updated as well if the affected files were previously already stored in the database.<br /><br />
 
-When you change the old or new path, the add-on will start checking for existence of the files at specified locations which could be time consuming, especially with the large databases and/or media files located on network drives. You don't need to wait for the add-on to finish searching for files since it is executed in another thread just for checking purpose and will be canceled if you click on the <i>Update</i> button. However, it is recommended to wait for add-on to finish with that searching because it will display how many files from the database are found on the new specified location.<br /><br />
+        <p><font size="+1"><b><a id="limitations">Limitations</a></b></font></p>
+        The UPnP and URL paths cannot be specified for the <i>New path</i>, only paths with a drive letter or network drives with UNC path.<br /><br />However, you could specify UPnP or URL paths in the <i>Old path</i>.
 
-If the option <i>Copy files from the old to the new location first</i> is turned on, then the files will be physically copied before updating of the database; otherwise, only the data about the location of files in the database will be modified. If you plan to use this option, it is recommended that you temporarily turn off the File Monitor option in the Options dialog box (if you have it already enabled) before you open the add-on's dialog box.<br /><br />
+        <p><font size="+1"><b><a id="important">Important</a></b></font></p>
+        If you want to use this add-on when replacing the hard disk, it is very important that you turn off the automatic scanning for new media files in the program before you attach your new drive, until you finish with this add-on. If you let the program to automatically scan the new drive adding its media files to the old database, you will end up with the database containing duplicates with files both from the old and new drive.<br /><br />
 
-Only the media/playlist files previously stored in the database could be copied. If you have some extra files beside of the media files in their containing folders, e.g. bitmaps with covers or some txt/html files, they would not be copied using the mentioned option; in that case you should use your preferred program for backup to copy files from the old to the new location before you apply this add-on.<br /><br />
+        It is also recommended that you suspend all activities that could modify database, including playback of files (playing info is updated in database), until the add-on finish with updating.<br /><br />
 
-If you want to update location in database only for files that exist at the new specified location, you should turn on the option <i>Update paths in database only for files that exist at new location</i>. In that case you should wait for the add-on to finish with search for files before you click on the <i>Update</i> button. However, if you turn that option off, you could click on the <i>Update</i> button immediately after you specify the old and new paths.<br /><br />
+        This add-on is mostly useful if you have similar folder structure on the old and new drives, i.e. when the old and new paths have different only base folders. If you have moved media files to the new hard disk using different filenames and/or folder structure than it is stored in the database, then you could try <a href="https://zvezdan-d.github.io/RestorePlayHistory.html">Restore/Synchronize Database</a> add-on instead since it can transfer data even in such situations, but it is much slower.<br /><br />
 
-The <i>Backup</i> button allows you to save a copy of the current (active) database to some safe place. And finally, when all previously mentioned options are set as wanted, the click on the <i>Update</i> button will start the update action (which could take some time). After the update is finished, the add-on could try to refresh the affected paths in the main filelist, but sometimes that could be unsuccessful because of some limitations in the program itself, in which case the simple restart of the program would help. The paths in the Now Playing panel will be updated as well if the affected files were previously already stored in the database.<br /><br />
+        This add-on is relatively dangerous and could cause some corrupted data in the current database, especially if you forcibly terminate the program during its execution! Please make a backup of the current database before you apply this add-on.<br />
 
-<p><font size="+1"><b><a id="limitations">Limitations</a></b></font></p>
-The UPnP and URL paths cannot be specified for the <i>New path</i>, only paths with a drive letter or network drives with UNC path.<br /><br />However, you could specify UPnP or URL paths in the <i>Old path</i>.
+        <p><font size="+1"><b><a id="notice">Notice</a></b></font></p>
+        This add-on is a false positive reported as a worm by F-Secure. The author of F-Secure promised me that will update its database and put the add-on on white-list, but still didn't. If you go to the <a href="https://www.virustotal.com/en/file/16a3f5351b561a0a6cee38aee06190dac8a47a80fe16fb2d45f17cfbd5838e33/analysis/1475442287/">www.virustotal.com/en/</a> site, you will see that it is safe tested by 54 popular anti-virus engines; the only one reporting a worm in it is F-Secure.<br />
 
-<p><font size="+1"><b><a id="important">Important</a></b></font></p>
-If you want to use this add-on when replacing the hard disk, it is very important that you turn off the automatic scanning for new media files in the program before you attach your new drive, until you finish with this add-on. If you let the program to automatically scan the new drive adding its media files to the old database, you will end up with the database containing duplicates with files both from the old and new drive.<br /><br />
-
-It is also recommended that you suspend all activities that could modify database, including playback of files (playing info is updated in database), until the add-on finish with updating.<br /><br />
-
-This add-on is mostly useful if you have similar folder structure on the old and new drives, i.e. when the old and new paths have different only base folders. If you have moved media files to the new hard disk using different filenames and/or folder structure than it is stored in the database, then you could try <a href="https://zvezdan-d.github.io/RestorePlayHistory.html">Restore/Synchronize Database</a> add-on instead since it can transfer data even in such situations, but it is much slower.<br /><br />
-
-This add-on is relatively dangerous and could cause some corrupted data in the current database, especially if you forcibly terminate the program during its execution! Please make a backup of the current database before you apply this add-on.<br />
-
-<p><font size="+1"><b><a id="notice">Notice</a></b></font></p>
-This add-on is a false positive reported as a worm by F-Secure. The author of F-Secure promised me that will update its database and put the add-on on white-list, but still didn't. If you go to the <a href="https://www.virustotal.com/en/file/16a3f5351b561a0a6cee38aee06190dac8a47a80fe16fb2d45f17cfbd5838e33/analysis/1475442287/">www.virustotal.com/en/</a> site, you will see that it is safe tested by 54 popular anti-virus engines; the only one reporting a worm in it is F-Secure.<br />
-
-<!-- Start of StatCounter Code for Default Guide -->
-<script type="text/javascript">
-var sc_download_type="7z|aac|avi|csv|doc|exe|flv|gif|gz|jpg|jpeg|js|mmip|mp3|mp4|mpg|mpeg|mov|pdf|phps|png|ppt|rar|sit|tar|torrent|txt|wma|wmv|xls|xml|zip";
-var sc_project=9499114;
-var sc_invisible=1;
-var sc_security="629c143c";
-var scJsHost = (("https:" == document.location.protocol) ?
-"https://secure." : "http://www.");
-document.write("<sc"+"ript type='text/javascript' src='" +
-scJsHost+
-"statcounter.com/counter/counter.js'></"+"script>");
-</script>
-<noscript><div class="statcounter"><a title="web counter"
-href="http://statcounter.com/free-hit-counter/"
-target="_blank"><img class="statcounter"
-src="http://c.statcounter.com/9499114/0/629c143c/1/"
-alt="web counter"></a></div></noscript>
-<!-- End of StatCounter Code for Default Guide -->
-
-<center><img src="http://s06.flagcounter.com/count/G0r/bg_FFFFFF/txt_000000/border_CCCCCC/columns_1/maxflags_5/viewers_3/labels_1/pageviews_1/flags_0/" border="0"></center>
-
-</div>
+        <center><img src="http://s06.flagcounter.com/count/G0r/bg_FFFFFF/txt_000000/border_CCCCCC/columns_1/maxflags_5/viewers_3/labels_1/pageviews_1/flags_0/" border="0"></center>
+    </div>
 </body>
 </html>

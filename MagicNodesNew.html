@@ -349,7 +349,7 @@ The <i>Split by</i> group of controls allows parsing of the MN field correspondi
 
 The <i>Split mode</i> combo box has the next items: <i>String part, String Before, String After, Single Part, Parts Before, Parts After, All Parts, Categories, Odd Parts</i> and <i>Even Parts</i>. The first three items that start with the "String *" don't affect the enabled state of other controls in the dialog box because they are based on the SQL code to do parsing of the MN field, but the complexity of the implemented code raises exponentially with the <i>Split part</i> value specified with the spin box, and for the large numbers you could even get the error message! The remaining items from the <i>Split mode</i> combo box don't have that problem since they are not using the SQL code, but VBScript instead. However, the drawback of the remaining items is that they cannot be used with the <i>Sort by/Statistics</i> qualifiers as well as almost none of the <i>Show *</i> qualifiers.<br /><br />
 
-One important note: the ";" and "; " are not the same strings and using them in the <i>Split by</i> qualifier will give you different results. The detailed explanation about the qualifiers related to this group of controls with many examples can be found in the <a href="http://solair.eunet.rs/~zvezdand/MagicNodes.htm#splitexamples">Split examples</a> section on the web page of the old version of this add-on.<br /><br />
+One important note: the ";" and "; " are not the same strings and using them in the <i>Split by</i> qualifier will give you different results. The detailed explanation about the qualifiers related to this group of controls with many examples can be found in the <a href="MagicNodes.html#splitexamples">Split examples</a> section on the web page of the old version of this add-on.<br /><br />
 
 <b>Left of</b><br />
 The next control has two meanings, depending of the following <i>Right of</i> control: if the <i>Right of</i> text box is empty, the first control has the <i>Left of</i> caption, otherwise it is <i>Right until</i>. It is somewhat awkward order of the controls, it would be better and more intuitive if the <i>Right until</i> has separate control on the right side of the <i>Right of</i> control, but in that case the Settings dialog box would be even larger and more overcrowded than it is now. Anyway, one more reason why this strange decision was made is because the <i>Left of</i> and <i>Right of</i> controls cannot be used at the same time, so it was quite logical to use the same controls for the <i>Left of</i> and <i>Right until</i> (the similar reasons was used with the <i>Show node if empty</i> and <i>Show nodes</i>).<br /><br />
@@ -365,7 +365,7 @@ The <i>Show if contain</i> check box under the <i>Right of</i> text box has the 
 
 If the <i>Right of</i> text box has specified some string, you could also specify <i>Right until</i> string to delimit the right end of the result (the corresponding qualifier is <i>Right until</i>). For example, if the MN field contains "The Beatles", and if I specify "Be" for the <i>Right of</i> and "es" for the <i>Right until</i>, I will get the node "atl". Again, similarly to the previous cases with the <i>Show if contain</i> check box, if this one is turned on, the <i>Right until</i> qualifier will become <i>Exclusive Right until</i>.<br /><br />
 
-The strings for parsing could be specified more than once with all <i>Left/Right of</i> qualifiers, and they should be separated with the "|" character. Some more examples about the <i>(Exclusive) Left of</i> and <i>(Exclusive) Right of</i> qualifiers can be found in the <a href="http://solair.eunet.rs/~zvezdand/MagicNodes.htm#leftrightexam">Left of/Right of examples</a> section on the web page of the old version of this add-on and in the mentioned <a href="http://west-penwith.org.uk/misc/MagicNodes.pdf">PDF manual</a>.<br /><br />
+The strings for parsing could be specified more than once with all <i>Left/Right of</i> qualifiers, and they should be separated with the "|" character. Some more examples about the <i>(Exclusive) Left of</i> and <i>(Exclusive) Right of</i> qualifiers can be found in the <a href="MagicNodes.html#leftrightexam">Left of/Right of examples</a> section on the web page of the old version of this add-on and in the mentioned <a href="http://west-penwith.org.uk/misc/MagicNodes.pdf">PDF manual</a>.<br /><br />
 
 <b>Sort files / Sort nodes (prefixes)</b><br />
 The sorting and statistics controls on the right side of the Settings dialog box can be used only with the global and local nodes, but not with the group nodes. The sorting group of controls has two different meanings depending of the selected node in the Nodes list box: if you have selected global node, this group will have the <i>Sort files</i> caption, but if you have selected a local node, this group will have the <i>Sort nodes (prefixes)</i> caption. So, with the same controls you could set both sorting of the files and sorting of the nodes independently (the corresponding qualifier is <i>Sort by</i>).<br /><br />
@@ -661,26 +661,7 @@ This add-on is a false positive reported as a worm by F-Secure. The author of F-
 
 If you are interested about my other add-ons for MediaMonkey, you could visit the <a href="https://zvezdan-d.github.io/MediaMonkeyAddons.html">following page</a>.<br /><br />
 
-<!-- Start of StatCounter Code for Default Guide -->
-<script type="text/javascript">
-var sc_download_type="7z|aac|avi|csv|doc|exe|flv|gif|gz|jpg|jpeg|js|mmip|mp3|mp4|mpg|mpeg|mov|pdf|phps|png|ppt|rar|sit|tar|torrent|txt|wma|wmv|xls|xml|zip";
-var sc_project=9499114;
-var sc_invisible=1;
-var sc_security="629c143c";
-var scJsHost = (("https:" == document.location.protocol) ?
-"https://secure." : "http://www.");
-document.write("<sc"+"ript type='text/javascript' src='" +
-scJsHost+
-"statcounter.com/counter/counter.js'></"+"script>");
-</script>
-<noscript><div class="statcounter"><a title="web counter"
-href="http://statcounter.com/free-hit-counter/"
-target="_blank"><img class="statcounter"
-src="http://c.statcounter.com/9499114/0/629c143c/1/"
-alt="web counter"></a></div></noscript>
-<!-- End of StatCounter Code for Default Guide -->
-
+<center><img src="http://flagcounter.com/count/fcBZ6/bg=FFFFFF/txt=000000/border=CCCCCC/columns=1/maxflags=5/viewers=3/labels=1/pageviews=1/" border="0"></center>
 </div>
-
 </body>
 </html>

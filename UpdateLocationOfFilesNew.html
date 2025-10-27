@@ -8,173 +8,157 @@
 </head>
 
 <body>
-<div class="tbl" style="position: fixed; top: 0; width: 100%; padding-bottom: 5px" align="Center">
-<b><font size="+2">Update Location of Files in Database</font><br />
-Version 2.3.1<br />
-- MediaMonkey Add-on -</b><br />
-<i>by Zvezdan Dimitrijevi&cacute;</i>
-</div>
+    <div class="tbl" style="position: fixed; top: 0; width: 100%; padding-bottom: 5px" align="Center">
+        <b><font size="+2">Update Location of Files in Database</font><br />
+        Version 2.3.1<br />
+        - MediaMonkey add-on -</b><br />
+        <i>by Zvezdan Dimitrijevi&cacute;</i>
+    </div>
+    <div id="external">
+        <iframe src="UpdateLocationOfFiles_Ext.html" title="Donation" style="width: 100%; height: 100%; border: none;"></iframe>
+    </div>
 
-<div id="external">
-    <iframe src="UpdateLocationOfFiles_Ext.html" title="Donation" style="width: 100%; height: 100%; border: none;"></iframe>
-</div>
+    <div id="content" style="padding: 10px;">
+        This is information about the enhanced version of Update Location of Files add-on for <a href="http://www.mediamonkey.com/">MediaMonkey</a> v2.x-4.0 (there is also a <a href="https://zvezdan-d.github.io/UpdateLocationOfFilesMM5.html">version</a> of the add-on that works with MM v5/20xx).
+        <br /><br />
+        The <a href="https://zvezdan-d.github.io/UpdateLocationOfFiles.html">freely available version</a> of this add-on is already very useful after upgrading hard disks or moving files from/to a network drive with UNC paths. It allows specifying the old and new base folders (not necessarily the root of a drive), and it could copy the media files from the old to the new location, in addition to updating the location data in the database.
+        <br /><br />
+        The enhanced version is even more powerful and it has added many very useful options. Among others, it enables updating several locations at once and removing duplicates that could appear as a result of the applied update. However, it is available only to donors.
+        <br /><br />
 
-<div id="content" style="padding: 10px;">
+        <hr width="100%">
 
-<p>This is information about the enhanced version of Update Location of Files add-on for <a href="http://www.mediamonkey.com/">MediaMonkey</a> v2.x-4.0 (there is also <a href="https://zvezdan-d.github.io/UpdateLocationOfFilesMM5.html">version</a> of the add-on that works with MM v5). The <a href="https://zvezdan-d.github.io/UpdateLocationOfFiles.html">freely available version</a> of this add-on is already very useful after upgrading hard disks or moving files from/to some network drive with UNC path. However, the enhanced version is even more powerful and it has added many very useful options; among others it allows update of several locations at once and removing of duplicates that could appear as a result of the applied update.<br /><br /></p>
+        <p><font size="+1"><b><a id="whatisnew">What is new</a></b></font></p>
+        <dl>
+        <dt>v2.3.1 - 2020-07-27</dt><ul>
+        <li>Added: drive letters to the non-existent drives in the Old drive list;
+        <li>Fixed: error on opening of dialog box in some cases (e.g. when all drives in the Library exist in the computer and none drive is selected in Media Tree) (broken since v2.3);
+        <li>Fixed: skip of update in some cases when multiple paths are specified (broken since v2.2);
+        <li>Fixed: resizing of dialog box with the skinned version of the program on Windows Vista and later.
+        </ul><br />
 
-<hr width="100%">
+        <dt>v2.3 - 2019-05-11</dt><ul>
+        <li>Added: option <i>Keep duplicates that have: oldest / newest Date added</i> (the previous versions of the add-on kept only duplicates with the oldest Date added when the option <i>Remove duplicates</i> is turned on, but now you can choose which ones you want to keep);
+        <li>Fixed and improved: speed of some operations of the add-on, especially related to the <i>Remove duplicates</i> option.
+        </ul><br />
 
-<p><font size="+1"><b><a id="whatisnew">What is new</a></b></font></p>
-<dl>
-<dt>v2.3.1 - 2020-07-27</dt><ul>
-<li>Added: drive letters to the non-existent drives in the Old drive list;
-<li>Fixed: error on opening of dialog box in some cases (e.g. when all drives in the Library exist in the computer and none drive is selected in Media Tree) (broken since v2.3);
-<li>Fixed: skip of update in some cases when multiple paths are specified (broken since v2.2);
-<li>Fixed: resizing of dialog box with the skinned version of the program on Windows Vista and later.
-</ul><br />
+        <dt>v2.2.3 - 2019-03-04</dt><ul>
+        <li>Fixed: update when Old/New paths contain the @ character [MM3+], i.e. the _ % [ characters [MM2].
+        </ul><br />
 
-<dt>v2.3 - 2019-05-11</dt><ul>
-<li>Added: option <i>Keep duplicates that have: oldest / newest Date added</i> (the previous versions of the add-on kept only duplicates with the oldest Date added when the option <i>Remove duplicates</i> is turned on, but now you can choose which ones you want to keep);
-<li>Fixed and improved: speed of some operations of the add-on, especially related to the <i>Remove duplicates</i> option.
-</ul><br />
+        <dt>v2.2.2 - 2017-08-02</dt><ul>
+        <li>Added: display of the currently found files in the progress bar when checking for their existence;
+        <li>Fixed: error when specifying <i>Old path</i> in some cases.
+        </ul><br />
 
-<dt>v2.2.3 - 2019-03-04</dt><ul>
-<li>Fixed: update when Old/New paths contain the @ character [MM3+], i.e. the _ % [ characters [MM2].
-</ul><br />
+        <dt>v2.2.1 - 2017-03-01</dt><ul>
+        <li>Fixed: update when the <i>Old path</i> has specified a root of some drive.
+        </ul><br />
 
-<dt>v2.2.2 - 2017-08-02</dt><ul>
-<li>Added: display of the currently found files in the progress bar when checking for their existence;
-<li>Fixed: error when specifying <i>Old path</i> in some cases.
-</ul><br />
+        <dt>v2.2 - 2017-02-01</dt><ul>
+        <li>Added: option <i>Only older Date modified</i> that could be set when the <i>Overwrite files</i> option is turned on;
+        <li>Added: option <i>Copy/Move all files beside of media files (e.g. .jpg, .html)</i> which allows copying/moving of non-media files from/to the specified locations as well.
+        </ul><br />
 
-<dt>v2.2.1 - 2017-03-01</dt><ul>
-<li>Fixed: update when the <i>Old path</i> has specified a root of some drive.
-</ul><br />
+        <dt>v2.1 - 2017-01-14</dt><ul>
+        <li>Added: number of duplicate files in the caption of the <i>Remove duplicates ...</i> check box;
+        <li>Added: button with combo box which allow showing/selecting of missing/duplicate files in the main filelist.
+        </ul><br />
 
-<dt>v2.2 - 2017-02-01</dt><ul>
-<li>Added: option <i>Only older Date modified</i> that could be set when the <i>Overwrite files</i> option is turned on;
-<li>Added: option <i>Copy/Move all files beside of media files (e.g. .jpg, .html)</i> which allows copying/moving of non-media files from/to the specified locations as well.
-</ul><br />
+        <dt>v2.0 - 2016-11-28</dt><ul>
+        <li>Added: ability to update multiple locations at once, separating multiple paths in the input field using " or | (similar to Export/Import Playlists add-on);
+        <li>Added: option to move files from the old to the new location first (beside of the existing copy option);
+        <li>Added: option <i>Overwrite files with the same names at new location</i> (used with <i>Copy/Move</i> options);
+        <li>Added: option <i>Delete emptied folders</i> (used with the <i>Move</i> option);
+        <li>Added: option <i>Remove duplicates of updated files from database and merge their playing data</i> [MM3+].
+        </ul><br />
+        </dl>
 
-<dt>v2.1 - 2017-01-14</dt><ul>
-<li>Added: number of duplicate files in the caption of the <i>Remove duplicates ...</i> check box;
-<li>Added: button with combo box which allow showing/selecting of missing/duplicate files in the main filelist.
-</ul><br />
+        <p><font size="+1"><b><a id="installation">Installation</a></b></font></p>
+        <ul><li>For MediaMonkey 3.0 or higher - just double-click on the UpdateLocationOfFiles-xx.mmip file; if you are on Vista or newer Windows and you got "Product installation error", make sure you have MM3 set to <a href="http://www.mediamonkey.com/support/index.php?/Knowledgebase/Article/View/58/0/extensions-cannot-be-installed">"Run as Administrator"</a>; if you downloaded the installation package with IE7 and it changed its extension to a .zip, you should first change it back to a .mmip.</li>
+        <li>For MediaMonkey 2.x - rename a .mmip extension to a .zip, extract the UpdateLocationOfFiles.vbs file to the MediaMonkey's "Scripts" folder and restart MM program.</li></ul><br />
 
-<dt>v2.0 - 2016-11-28</dt><ul>
-<li>Added: ability to update multiple locations at once, separating multiple paths in the input field using " or | (similar to Export/Import Playlists add-on);
-<li>Added: option to move files from the old to the new location first (beside of the existing copy option);
-<li>Added: option <i>Overwrite files with the same names at new location</i> (used with <i>Copy/Move</i> options);
-<li>Added: option <i>Delete emptied folders</i> (used with the <i>Move</i> option);
-<li>Added: option <i>Remove duplicates of updated files from database and merge their playing data</i> [MM3+].
-</ul><br />
-</dl>
+        You need to accept the license agreement if you want to use this add-on.<br /><br />
 
-<p><font size="+1"><b><a id="installation">Installation</a></b></font></p>
-<ul><li>For MediaMonkey 3.0 or higher - just double-click on the UpdateLocationOfFiles-xx.mmip file; if you are on Vista or newer Windows and you got "Product installation error", make sure you have MM3 set to <a href="http://www.mediamonkey.com/support/index.php?/Knowledgebase/Article/View/58/0/extensions-cannot-be-installed">"Run as Administrator"</a>; if you downloaded the installation package with IE7 and it changed its extension to a .zip, you should first change it back to a .mmip.</li>
-<li>For MediaMonkey 2.x - rename a .mmip extension to a .zip, extract the UpdateLocationOfFiles.vbs file to the MediaMonkey's "Scripts" folder and restart MM program.</li></ul><br />
+        <center><img src="https://live.staticflickr.com/65535/47826644711_1dcf995186_o.png" alt="UpdateLocationOfFiles-2.3" border="0"></center>
 
-You need to accept the license agreement if you want to use this add-on.<br /><br />
+        <p><font size="+1"><b><a id="usage">Usage</a></b></font></p>
+        Using this add-on is very similar to the <a href="https://zvezdan-d.github.io/UpdateLocationOfFiles.html">older version</a> of the add-on. After its installation you will find the new <i>Update Location of Files in Database</i> option in the <i>Tools / Scripts</i> menu. When you choose that option from the menu, you will get opened the add-on's dialog box. After its first start, you will get selected the first drive from the database that is missing and other options will be set to their default blank/unchecked states; if you change some option in the dialog box and start the update, the settings will be remembered in the MediaMonkey.ini file, so the next opening of the dialog box will show those last settings.<br /><br />
 
-<center><img src="https://live.staticflickr.com/65535/47826644711_1dcf995186_o.png" alt="UpdateLocationOfFiles-2.3" border="0"></center>
+        With the <i>Old drive</i> and <i>Old path</i> combo boxes you should set the old location of files (source) and with the <i>New path</i> text box you should set the new location of files (destination). To be able to do update, both locations should be correctly specified. If your <i>Old drive/path</i> dropdown lists are not filled with drives/paths, that means that your database is empty, in which case this add-on cannot be used - you should have database that contains files if you want to update their location (as the name of the add-on suggests).<br /><br />
 
-<p><font size="+1"><b><a id="usage">Usage</a></b></font></p>
-Using this add-on is very similar to the <a href="https://zvezdan-d.github.io/UpdateLocationOfFiles.html">older version</a> of the add-on. After its installation you will find the new <i>Update Location of Files in Database...</i> option in the <i>Tools / Scripts</i> menu. When you choose that option from the menu, you will get opened the add-on's dialog box. After its first start, you will get selected the first drive from the database that is missing and other options will be set to their default blank/unchecked states; if you change some option in the dialog box and start the update, the settings will be remembered in the MediaMonkey.ini file, so the next opening of the dialog box will show those last settings.<br /><br />
+        The <i>Old drive</i> combo box shows all drives containing media files that are added to the database (Library). These are the same drives that you have displayed in the Location sub-folder of the Entire Library collection. When you choose drive from that combo box, the <i>Old path</i> combo box will be filled with all folders from that drive containing files in the database including all their parent folders until the root of drive. For example, if I have one track in the database which has the path C:\Music\Pink Floyd\Time.mp3, there would be listed 3 items: C:\, C:\Music\ and C:\Music\Pink Floyd\.<br /><br />
 
-With the <i>Old drive</i> and <i>Old path</i> combo boxes you should set the old location of files (source) and with the <i>New path</i> text box you should set the new location of files (destination). To be able to do update, both locations should be correctly specified. If your <i>Old/drive path</i> dropdown lists are not filled with drives/paths, that means that your database is empty, in which case this add-on cannot be used - you should have database that contains files if you want to update their location (as the name of the add-on suggests).<br /><br />
+        With the <i>Old path</i> combo box you are choosing the base folder that you want to update. This means that you will get updated all files from that folder and its sub(-sub)-folders recursively. This also means that you should select the root of the drive in the <i>Old path</i> combo box if you want to update all files from that drive. For example, if I specify C:\Music\, all files which have that on the beginning of the path will be updated, like C:\Music\Pink Floyd\Time.mp3, but not file like C:\My Documents\Pink Floyd\Time.mp3 since it has different base folder.<br /><br />
 
-The <i>Old drive</i> combo box shows all drives containing media files that are added to the database (Library). These are the same drives that you have displayed in the Location sub-folder of the Entire Library collection. When you choose drive from that combo box, the <i>Old path</i> combo box will be filled with all folders from that drive containing files in the database including all their parent folders until the root of drive. For example, if I have one track in the database which has the path C:\Music\Pink Floyd\Time.mp3, there would be listed 3 items: C:\, C:\Music\ and C:\Music\Pink Floyd\.<br /><br />
+        The <i>Old location</i> label shows how many media and playlist files from the database are located in the base folder (and its sub-folders) selected by <i>Old path</i>; also, it shows how many of those files still physically exist at that location.<br /><br />
 
-With the <i>Old path</i> combo box you are choosing the base folder that you want to update. This means that you will get updated all files from that folder and its sub(-sub)-folders recursively. This also means that you should select the root of the drive in the <i>Old path</i> combo box if you want to update all files from that drive. For example, if I specify C:\Music\, all files which have that on the beginning of the path will be updated, like C:\Music\Pink Floyd\Time.mp3, but not file like C:\My Documents\Pink Floyd\Time.mp3 since it has different base folder.<br /><br />
+        For example, if my <i>Old location</i> shows "228831 media files + 1329 playlist files, 229920 existing + 240 missing", that means that I have 228831 records about media files and 1329 records containing the information about playlist files stored into the database. The sum of these two numbers is 230160 files and it is equal to the sum of another two numbers (229920 existing + 240 missing). In another words, of all my media and playlist files referenced in the database I have 240 files that are psychically missing on the location that I have specified with the <i>Old path</i>. It is not displayed how many media or playlist files are existing/missing individually, but only for their sum.<br /><br />
 
-The <i>Old location</i> label shows how many media and playlist files from the database are located in the base folder (and its sub-folders) selected by <i>Old path</i>; also, it shows how many of those files still physically exist at that location.<br /><br />
+        By the way, the records containing information about playlist files are not the same as the records about playlists. The records of playlists could contain the information about the imported playlists files, but if you have playlists that are created by yourself, i.e. they are not created by import from playlist files, then such playlists will not contain the information about playlist files.<br /><br />
 
-For example, if my <i>Old location</i> shows "228831 media files + 1329 playlist files, 229920 existing + 240 missing", that means that I have 228831 records about media files and 1329 records containing the information about playlist files stored into the database. The sum of these two numbers is 230160 files and it is equal to the sum of another two numbers (229920 existing + 240 missing). In another words, of all my media and playlist files referenced in the database I have 240 files that are psychically missing on the location that I have specified with the <i>Old path</i>. It is not displayed how many media or playlist files are existing/missing individually, but only for their sum.<br /><br />
+        In the <i>New path</i> text box you should specify the base folder which would replace the old one after applied the <i>Update</i> option. For example, if the <i>Old path</i> is "c:\Music\" and <i>New path</i> is "d:\Media\My Music\" then all files in the database that have "c:\Music\" on the begin of path will be updated to "d:\Media\My Music\". You could type the new path on keyboard or you could click on the "..." button to choose an existing drive/folder from the <i>Browse for folder</i> dialog box.<br /><br />
 
-By the way, the records containing information about playlist files are not the same as the records about playlists. The records of playlists could contain the information about the imported playlists files, but if you have playlists that are created by yourself, i.e. they are not created by import from playlist files, then such playlists will not contain the information about playlist files.<br /><br />
+        Similarly to the <i>Old location</i>, the <i>New location</i> label shows how many media and playlist files from the database physically exist at the base folder (and its sub-folders) specified by <i>New path</i>.<br /><br />
 
-In the <i>New path</i> text box you should specify the base folder which would replace the old one after applied the <i>Update</i> option. For example, if the <i>Old path</i> is "c:\Music\" and <i>New path</i> is "d:\Media\My Music\" then all files in the database that have "c:\Music\" on the begin of path will be updated to "d:\Media\My Music\". You could type the new path on keyboard or you could click on the "..." button to choose an existing drive/folder from the <i>Browse for folder</i> dialog box.<br /><br />
+        When you change the old or new path, the add-on will start checking for existence of the files at specified locations which could be time consuming, especially with the large databases and/or media files located on network drives. You don't need to wait for the add-on to finish searching for files since it is executed in another thread just for checking purpose and will be canceled if you click on the <i>Update</i> button. However, it is recommended to wait for add-on to finish with that searching because it will display how many files from the database are found on the new specified location.<br /><br />
 
-Similarly to the <i>Old location</i>, the <i>New location</i> label shows how many media and playlist files from the database physically exist at the base folder (and its sub-folders) specified by <i>New path</i>.<br /><br />
+        If you have the database containing files stored on several drives/paths, and if you want to update many of their locations at once, you could specify them all in the <i>Old path</i> combo box using " (double quote) or | (vertical line) as separators. The difference between those two separators is that the " separator is (mainly) used for the one-to-one replacements and the | separator is used for the many-to-one replacements. Similarly, the <i>New path</i> combo box could contain multiple paths separated with the " separator, but it doesn't support | as a separator.<br /><br />
 
-When you change the old or new path, the add-on will start checking for existence of the files at specified locations which could be time consuming, especially with the large databases and/or media files located on network drives. You don't need to wait for the add-on to finish searching for files since it is executed in another thread just for checking purpose and will be canceled if you click on the <i>Update</i> button. However, it is recommended to wait for add-on to finish with that searching because it will display how many files from the database are found on the new specified location.<br /><br />
+        For example, if I have c:\|d:\|e:\ in the <i>Old path</i> and f:\ in the <i>New path</i>, all files located on the c:, d: and e: drives will be updated to f:. However, if I have the <i>Old path</i> as c:\"d:\"e: and the <i>New path</i> as f:\"g:\"h:\ then files from c: will be updated to f:, files from d: will be updated to g: and files from e: will be updated to h:.<br /><br />
 
-If you have the database containing files stored on several drives/paths, and if you want to update many of their locations at once, you could specify them all in the <i>Old path</i> combo box using " (double quote) or | (vertical line) as separators. The difference between those two separators is that the " separator is (mainly) used for the one-to-one replacements and the | separator is used for the many-to-one replacements. Similarly, the <i>New path</i> combo box could contain multiple paths separated with the " separator, but it doesn't support | as a separator.<br /><br />
+        The number of specified " separators in the <i>Old path</i> combo box is recommended to be equal to the number of the " separators in the <i>New path</i>, but that is not necessary. In case that the number of the " separators in the <i>Old path</i> is greater than the number of the same separators in the <i>New path</i>, the rightmost paths from the <i>Old path</i> that don't have the corresponding pair in the <i>New path</i> will be replaced with the last (rightmost) path specified in the <i>New path</i>.<br /><br />
 
-For example, if I have c:\|d:\|e:\ in the <i>Old path</i> and f:\ in the <i>New path</i>, all files located on the c:, d: and e: drives will be updated to f:. However, if I have the <i>Old path</i> as c:\"d:\"e: and the <i>New path</i> as f:\"g:\"h:\ then files from c: will be updated to f:, files from d: will be updated to g: and files from e: will be updated to h:.<br /><br />
+        For example, if the <i>Old path</i> is c:\"d:\"e:\ and the <i>New path </i> is f:\"g:\ then c: will be updated to f: and both d: and e: will be updated to g:. The same result could be get if the <i>Old path</i> is c:\"d:\|e:\. However, if the <i>Old path</i> is c:\|d:\"e:\ then files from both c: and d: will be updated to f: and files from e: will be updated to g:. Here is one more example of using different separators in the <i>Old path</i>: c:\|d:\"e:\|f:\ and with the <i>New path</i> set to g:\"h:\ the files from both c: and d: will be updated to g: and files from both e: and f: will be updated to h:.<br /><br />
 
-The number of specified " separators in the <i>Old path</i> combo box is recommended to be equal to the number of the " separators in the <i>New path</i>, but that is not necessary. In case that the number of the " separators in the <i>Old path</i> is greater than the number of the same separators in the <i>New path</i>, the rightmost paths from the <i>Old path</i> that don't have the corresponding pair in the <i>New path</i> will be replaced with the last (rightmost) path specified in the <i>New path</i>.<br /><br />
+        Instead of typing paths by hand on keyboard, you could select paths using the <i>Old path</i> dropdown list and the "..." button next to the <i>New path</i> text box with a mouse. When you choose drive from the <i>Old drive</i> combo box or path from the <i>Old path</i> dropdown list, the selected item from that list will replace the whole content of the <i>Old path</i> input field, unless its content is not finished with the " or | characters in which case the selected path will be appended to the end of <i>Old path</i>.<br /><br />
 
-For example, if the <i>Old path</i> is c:\"d:\"e:\ and the <i>New path </i> is f:\"g:\ then c: will be updated to f: and both d: and e: will be updated to g:. The same result could be get if the <i>Old path</i> is c:\"d:\|e:\. However, if the <i>Old path</i> is c:\|d:\"e:\ then files from both c: and d: will be updated to f: and files from e: will be updated to g:. Here is one more example of using different separators in the <i>Old path</i>: c:\|d:\"e:\|f:\ and with the <i>New path</i> set to g:\"h:\ the files from both c: and d: will be updated to g: and files from both e: and f: will be updated to h:.<br /><br />
+        Similarly, when you choose path using the "..." button, the whole content of the <i>New path</i> text box will replaced with the path selected in the <i>Browse for folder</i> dialog box, unless its content is not finished with the " character, in which case the selected path will be appended to the end of the <i>New path</i>.<br /><br />
 
-Instead of typing paths by hand on keyboard, you could select paths using the <i>Old path</i> dropdown list and the "..." button next to the <i>New path</i> text box with a mouse. When you choose drive from the <i>Old drive</i> combo box or path from the <i>Old path</i> dropdown list, the selected item from that list will replace the whole content of the <i>Old path</i> input field, unless its content is not finished with the " or | characters in which case the selected path will be appended to the end of <i>Old path</i>.<br /><br />
+        The " and | buttons on the right side of the <i>Old path</i> and <i>New path</i> fields allow you to append the corresponding separators to the end of input field using mouse.<br /><br />
 
-Similarly, when you choose path using the "..." button, the whole content of the <i>New path</i> text box will replaced with the path selected in the <i>Browse for folder</i> dialog box, unless its content is not finished with the " character, in which case the selected path will be appended to the end of the <i>New path</i>.<br /><br />
+        If the option <i>Copy files - from the old to the new location first</i> is turned on, then the files will be physically copied before updating of the database; otherwise, only the data about the location of files in the database will be modified.<br /><br />
 
-The " and | buttons on the right side of the <i>Old path</i> and <i>New path</i> fields allow you to append the corresponding separators to the end of input field using mouse.<br /><br />
+        Similarly, if you turn on the <i>Move files - from the old to the new location first</i> option, the files will be physically moved before updating of the database. If you plan to use Copy or Move option, it is recommended that you temporarily turn off the File Monitor option in the Options dialog box (if you have it already enabled) before you open the add-on's dialog box.<br /><br />
 
-If the option <i>Copy files - from the old to the new location first</i> is turned on, then the files will be physically copied before updating of the database; otherwise, only the data about the location of files in the database will be modified.<br /><br />
+        If you have files with the same filenames in the old and new locations, you could determine what will happen when you choose <i>Copy</i> or <i>Move</i> option using the <i>Overwrite files with the same names at new location</i> option. If that option is turned off, the files with the same names at the new location will be kept, as well as the files at the old location (even when the <i>Move</i> option is selected). However, if the <i>Overwrite</i> option is turned on, the files from the old location will overwrite files with the same names at the new location.<br /><br />
 
-Similarly, if you turn on the <i>Move files - from the old to the new location first</i> option, the files will be physically moved before updating of the database. If you plan to use Copy or Move option, it is recommended that you temporarily turn off the File Monitor option in the Options dialog box (if you have it already enabled) before you open the add-on's dialog box.<br /><br />
+        When the <i>Only older Date modified</i> option is turned on, the files with the same names at the new locations will be overwritten only if they have older Date Modified attributes, i.e. the files at the old location are modified sooner.<br /><br />
 
-If you have files with the same filenames in the old and new locations, you could determine what will happen when you choose <i>Copy</i> or <i>Move</i> option using the <i>Overwrite files with the same names at new location</i> option. If that option is turned off, the files with the same names at the new location will be kept, as well as the files at the old location (even when the <i>Move</i> option is selected). However, if the <i>Overwrite</i> option is turned on, the files from the old location will overwrite files with the same names at the new location.<br /><br />
+        If you have the <i>Copy/Move all files beside of media files (e.g. .jpg, .html)</i> option turned off, only the media/playlist files whose records are previously stored in the database could be copied/moved. However, if you have some extra files beside of the media files in their containing folders, e.g. bitmaps with covers or some lyrics/txt/html files, they could be copied/moved together with the media files if you turn the mentioned option on. That means that all (sub-)folders will be copied/moved from the old to the new location recursively.<br /><br />
 
-When the <i>Only older Date modified</i> option is turned on, the files with the same names at the new locations will be overwritten only if they have older Date Modified attributes, i.e. the files at the old location are modified sooner.<br /><br />
+        The <i>Delete emptied folders</i> is similar to the option of the same name in the Auto-Organize Files dialog box. If you turn that option on, the folders that are left empty after successfully applied movement of media files will be deleted.<br /><br />
 
-If you have the <i>Copy/Move all files beside of media files (e.g. .jpg, .html)</i> option turned off, only the media/playlist files whose records are previously stored in the database could be copied/moved. However, if you have some extra files beside of the media files in their containing folders, e.g. bitmaps with covers or some lyrics/txt/html files, they could be copied/moved together with the media files if you turn the mentioned option on. That means that all (sub-)folders will be copied/moved from the old to the new location recursively.<br /><br />
+        If you want to update location in database only for files that exist at the new specified location, you should turn on the option <i>Update paths in database only for files that exist at new location</i>. In that case you should wait for the add-on to finish with search for files before you click on the <i>Update</i> button. However, if you turn that option off, you could click on the <i>Update</i> button immediately after you specify the old and new paths.<br /><br />
 
-The <i>Delete emptied folders</i> is similar to the option of the same name in the Auto-Organize Files dialog box. If you turn that option on, the folders that are left empty after successfully applied movement of media files will be deleted.<br /><br />
+        You should turn on the <i>Remove %d duplicates of updated files from database and merge their playing data</i> option if you want to remove records from the Songs table in the database about files that will become duplicates after applied the <i>Update</i> command. This option cannot be applied on files that are on UPnP or have URL paths. The add-on treats files as duplicates only if they have exactly the same paths, but it doesn't compare their tags at all. The number displayed in this check box shows the number of files that could be removed on update; it is less than the number of files displayed in the main filelist when you choose <i>Keep/Select/Show duplicates</i> options because the oldest added duplicates will not be removed on update, but will get the merged data (or the newest added, depending on the next option).<br /><br />
 
-If you want to update location in database only for files that exist at the new specified location, you should turn on the option <i>Update paths in database only for files that exist at new location</i>. In that case you should wait for the add-on to finish with search for files before you click on the <i>Update</i> button. However, if you turn that option off, you could click on the <i>Update</i> button immediately after you specify the old and new paths.<br /><br />
+        Let say that I have database with two files: c:\Music\A.mp3 with PlayCounter = 5 and d:\Test\A.mp3 with PlayCounter = 2, and let say that I want to update c:\Music\ to d:\Test\. If I have the mentioned option turned off, after the update I will still have the same two files in the database with the unchanged PlayCounter values, but this time (after the update) they both will have the same paths - d:\Test\A.mp3. However, if I turn that option on, after the update I will get removed one file from the database and the file which is first added to the database will be kept and will get merged its playing data with the data of the removed file (in this example the remaining file will have 7 play counts). The LastTimePlayed field in the Songs table will be also modified appropriately (set to the newer date), as well as all play data in the Played table.<br /><br />
 
-You should turn on the <i>Remove %d duplicates of updated files from database and merge their playing data</i> option if you want to remove records from the Songs table in the database about files that will become duplicates after applied the <i>Update</i> command. This option cannot be applied on files that are on UPnP or have URL paths. The add-on treats files as duplicates only if they have exactly the same paths, but it doesn't compare their tags at all. The number displayed in this check box shows the number of files that could be removed on update; it is less than the number of files displayed in the main filelist when you choose <i>Keep/Select/Show duplicates</i> options because the oldest added duplicates will not be removed on update, but will get the merged data (or the newest added, depending on the next option).<br /><br />
+        If the option <i>Remove duplicates</i> is turned on, you could choose which duplicates you want to keep when you apply the update with the option <i>Keep duplicates that have: oldest / newest Date added</i>. That option can be useful e.g. if you have two drives in the database with the (almost) same content, but the newer added drive has updated tags in files.<br /><br />
 
-Let say that I have database with two files: c:\Music\A.mp3 with PlayCounter = 5 and d:\Test\A.mp3 with PlayCounter = 2, and let say that I want to update c:\Music\ to d:\Test\. If I have the mentioned option turned off, after the update I will still have the same two files in the database with the unchanged PlayCounter values, but this time (after the update) they both will have the same paths - d:\Test\A.mp3. However, if I turn that option on, after the update I will get removed one file from the database and the file which is first added to the database will be kept and will get merged its playing data with the data of the removed file (in this example the remaining file will have 7 play counts). The LastTimePlayed field in the Songs table will be also modified appropriately (set to the newer date), as well as all play data in the Played table.<br /><br />
+        The leftmost button on the bottom of the dialog box allows showing/selecting of the media files that are missing at the new location or the duplicates of updated files in the main filelist of the program, with the particular action that could be chosen from the following dropdown list (<i>Keep missing files</i>, <i>Keep duplicates</i>, ...). The next combo box determines which chosen files will be showed/selected - only those from the current filelist or those from the entire Library.<br /><br />
 
-If the option <i>Remove duplicates</i> is turned on, you could choose which duplicates you want to keep when you apply the update with the option <i>Keep duplicates that have: oldest / newest Date added</i>. That option can be useful e.g. if you have two drives in the database with the (almost) same content, but the newer added drive has updated tags in files.<br /><br />
+        The <i>Backup</i> button allows you to save a copy of the current (active) database to some safe place. And finally, when all previously mentioned options are set as wanted, the click on the <i>Update</i> button will start the update action (which could take some time). After the update is finished, the add-on could try to refresh the affected paths in the main filelist, but sometimes that could be unsuccessful because of some limitations in the program itself, in which case the simple restart of the program would help. The paths in the Now Playing panel will be updated as well if the affected files were previously already stored in the database.<br /><br />
 
-The leftmost button on the bottom of the dialog box allows showing/selecting of the media files that are missing at the new location or the duplicates of updated files in the main filelist of the program, with the particular action that could be chosen from the following dropdown list (<i>Keep missing files</i>, <i>Keep duplicates</i>, ...). The next combo box determines which chosen files will be showed/selected - only those from the current filelist or those from the entire Library.<br /><br />
+        <p><font size="+1"><b><a id="limitations">Limitations</a></b></font></p>
+        The UPnP and URL paths cannot be specified for the <i>New path</i>, only paths with a drive letter or network drives with UNC path.<br /><br />However, you could specify UPnP or URL paths in the <i>Old path</i>.
 
-The <i>Backup</i> button allows you to save a copy of the current (active) database to some safe place. And finally, when all previously mentioned options are set as wanted, the click on the <i>Update</i> button will start the update action (which could take some time). After the update is finished, the add-on could try to refresh the affected paths in the main filelist, but sometimes that could be unsuccessful because of some limitations in the program itself, in which case the simple restart of the program would help. The paths in the Now Playing panel will be updated as well if the affected files were previously already stored in the database.<br /><br />
+        <p><font size="+1"><b><a id="important">Important</a></b></font></p>
+        If you want to use this add-on when replacing the hard disk, it is very important that you turn off the automatic scanning for new media files in the program before you attach your new drive, until you finish with this add-on. If you let the program to automatically scan the new drive adding its media files to the old database, you will end up with the database containing duplicates with files both from the old and new drive.<br /><br />
 
-<p><font size="+1"><b><a id="limitations">Limitations</a></b></font></p>
-The UPnP and URL paths cannot be specified for the <i>New path</i>, only paths with a drive letter or network drives with UNC path.<br /><br />However, you could specify UPnP or URL paths in the <i>Old path</i>.
+        It is also recommended that you suspend all activities that could modify database, including playback of files (playing info is updated in database), until the add-on finish with updating.<br /><br />
 
-<p><font size="+1"><b><a id="important">Important</a></b></font></p>
-If you want to use this add-on when replacing the hard disk, it is very important that you turn off the automatic scanning for new media files in the program before you attach your new drive, until you finish with this add-on. If you let the program to automatically scan the new drive adding its media files to the old database, you will end up with the database containing duplicates with files both from the old and new drive.<br /><br />
+        This add-on is mostly useful if you have similar folder structure on the old and new drives, i.e. when the old and new paths have only different base folders. If you have moved media files to the new hard disk using different filenames and/or folder structure than it is stored in the database, then you could try <a href="https://zvezdan-d.github.io/RestorePlayHistory.html">Restore/Synchronize Database</a> add-on instead since it can transfer data even in such situations, but it is much slower.<br /><br />
 
-It is also recommended that you suspend all activities that could modify database, including playback of files (playing info is updated in database), until the add-on finish with updating.<br /><br />
+        This add-on is relatively dangerous and could cause some corrupted data in the current database, especially if you forcibly terminate the program during its execution! Please make a backup of the current database before you apply this add-on. If you want to use the <i>Copy/Move files</i> option of this add-on, it is recommended that you already have a backup of your media files as well.<br /><br />
 
-This add-on is mostly useful if you have similar folder structure on the old and new drives, i.e. when the old and new paths have only different base folders. If you have moved media files to the new hard disk using different filenames and/or folder structure than it is stored in the database, then you could try <a href="https://zvezdan-d.github.io/RestorePlayHistory.html">Restore/Synchronize Database</a> add-on instead since it can transfer data even in such situations, but it is much slower.<br /><br />
+        <p><font size="+1"><b><a id="notice">Notice</a></b></font></p>
+        This add-on is a false positive reported as a worm by F-Secure. The author of F-Secure promised me that will update its database and put the add-on on white-list, but still didn't. If you go to the <a href="https://www.virustotal.com/en/file/16a3f5351b561a0a6cee38aee06190dac8a47a80fe16fb2d45f17cfbd5838e33/analysis/1475442287/">www.virustotal.com/en/</a> site, you will see that it is safe tested by 54 popular anti-virus engines; the only one reporting a worm in it is F-Secure. By the way, the F-Secure was constantly having the largest number of false positives in last few years according to the <a href="https://www.av-comparatives.org/real-world-protection-tests/">Real-World Protection Test</a> by AV-Comparatives.<br /><br />
 
-This add-on is relatively dangerous and could cause some corrupted data in the current database, especially if you forcibly terminate the program during its execution! Please make a backup of the current database before you apply this add-on. If you want to use the <i>Copy/Move files</i> option of this add-on, it is recommended that you already have a backup of your media files as well.<br /><br />
+        If you are interested about my other add-ons for MediaMonkey, you could visit the <a href="https://zvezdan-d.github.io/MediaMonkeyAddons.html">following page</a>.<br /><br />
 
-<p><font size="+1"><b><a id="notice">Notice</a></b></font></p>
-This add-on is a false positive reported as a worm by F-Secure. The author of F-Secure promised me that will update its database and put the add-on on white-list, but still didn't. If you go to the <a href="https://www.virustotal.com/en/file/16a3f5351b561a0a6cee38aee06190dac8a47a80fe16fb2d45f17cfbd5838e33/analysis/1475442287/">www.virustotal.com/en/</a> site, you will see that it is safe tested by 54 popular anti-virus engines; the only one reporting a worm in it is F-Secure. By the way, the F-Secure was constantly having the largest number of false positives in last few years according to the <a href="https://www.av-comparatives.org/real-world-protection-tests/">Real-World Protection Test</a> by AV-Comparatives.<br /><br />
-
-If you are interested about my other add-ons for MediaMonkey, you could visit the <a href="https://zvezdan-d.github.io/MediaMonkeyAddons.html">following page</a>.<br /><br />
-
-<!-- Start of StatCounter Code for Default Guide -->
-<script type="text/javascript">
-var sc_download_type="7z|aac|avi|csv|doc|exe|flv|gif|gz|jpg|jpeg|js|mmip|mp3|mp4|mpg|mpeg|mov|pdf|phps|png|ppt|rar|sit|tar|torrent|txt|wma|wmv|xls|xml|zip";
-var sc_project=9499114;
-var sc_invisible=1;
-var sc_security="629c143c";
-var scJsHost = (("https:" == document.location.protocol) ?
-"https://secure." : "http://www.");
-document.write("<sc"+"ript type='text/javascript' src='" +
-scJsHost+
-"statcounter.com/counter/counter.js'></"+"script>");
-</script>
-<noscript><div class="statcounter"><a title="web counter"
-href="http://statcounter.com/free-hit-counter/"
-target="_blank"><img class="statcounter"
-src="http://c.statcounter.com/9499114/0/629c143c/1/"
-alt="web counter"></a></div></noscript>
-<!-- End of StatCounter Code for Default Guide -->
-
-</div>
-
+        <center><img src="http://s06.flagcounter.com/count/G0r/bg_FFFFFF/txt_000000/border_CCCCCC/columns_1/maxflags_5/viewers_3/labels_1/pageviews_1/flags_0/" border="0"></center>
+    </div>
 </body>
 </html>
